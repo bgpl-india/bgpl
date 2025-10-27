@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Grid Pvt. Ltd.</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #ff6600;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: linear-gradient(rgba(255, 102, 0, 0.6), rgba(255, 102, 0, 0.6)), url('https://www.intellismartinfra.in/assets/images/banner/home-banner.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #ff6600;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .feature {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .feature h3 {
+      color: #ff6600;
+    }
+    .map-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .map-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="text"], input[type="email"], input[type="file"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #ff6600;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #e55a00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="BGPL Logo">
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#jobs">Careers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Bharat Grid Pvt. Ltd.</h1>
+    <p>Empowering India's Smart Energy Infrastructure</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Bharat Grid Pvt. Ltd. (BGPL) is a joint venture of EDF and ACTIS, dedicated to building and managing advanced smart grid and metering infrastructure across India. We deliver sustainable and efficient energy management solutions with a focus on innovation, reliability, and scalability.</p>
+    
+    <div class="map-section">
+      <h3>Our Presence in India</h3>
+      <img src="India Map.png" alt="Bharat Grid Presence in India">
+      <p><strong>Presence in:</strong> Gujarat, Punjab, and Tamil Nadu</p>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Smart Metering</h3>
+        <p>Deployment of state-of-the-art smart meters for efficient energy consumption monitoring.</p>
+      </div>
+      <div class="feature">
+        <h3>Grid Modernization</h3>
+        <p>Advanced grid management systems for improved reliability and reduced losses.</p>
+      </div>
+      <div class="feature">
+        <h3>Data Analytics</h3>
+        <p>Real-time data insights and analytics for better energy management decisions.</p>
+      </div>
+      <div class="feature">
+        <h3>Project Management</h3>
+        <p>Comprehensive project planning, execution, and lifecycle management for infrastructure projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="jobs" class="section">
+    <h2>Job Openings</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">We are always looking for passionate professionals to join our team. If you’re interested in contributing to India’s smart energy revolution, explore our current openings below or upload your CV for future opportunities.</p>
+    <br>
+    <form action="#" method="post" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+      <input type="submit" value="Upload CV">
+    </form>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">
+      <strong>Bharat Grid Pvt. Ltd. (A JV of EDF & ACTIS)</strong><br>
+      Prius Platinum, Wing A, 4th Floor, D3+P3B, District Center, Saket,<br>
+      New Delhi – 110 017, INDIA<br>
+      Mob.: +91 9918904222
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Bharat Grid Pvt. Ltd. | All Rights Reserved.
+  </footer>
+</body>
+</html>
