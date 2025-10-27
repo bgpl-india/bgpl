@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bharat Grid Pvt. Ltd.</title>
   <style>
     body {
@@ -32,7 +32,9 @@
       text-decoration: underline;
     }
     .hero {
-      background: linear-gradient(rgba(255, 102, 0, 0.6), rgba(255, 102, 0, 0.6)), url('https://www.intellismartinfra.in/assets/images/banner/home-banner.jpg') no-repeat center center/cover;
+      background: linear-gradient(rgba(255, 102, 0, 0.6), rgba(255, 102, 0, 0.6)), 
+      url('https://www.intellismartinfra.in/assets/images/banner/home-banner.jpg') 
+      no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 120px 20px;
@@ -80,6 +82,30 @@
       border: 1px solid #ddd;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+    .project-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .project-buttons button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .project-buttons button:hover {
+      background-color: #e55a00;
+    }
+    .dashboard {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
     footer {
       background-color: #333;
       color: white;
@@ -116,7 +142,7 @@
 </head>
 <body>
   <header>
-    <img src="logo.jpg" alt="BGPL Logo">
+    <img src="logo.jpg" alt="BGPL Logo" />
     <nav>
       <a href="#about">About Us</a>
       <a href="#services">Services</a>
@@ -133,12 +159,16 @@
 
   <section id="about" class="section">
     <h2>About Us</h2>
-    <p>Bharat Grid Pvt. Ltd. (BGPL) is a joint venture of EDF and ACTIS, dedicated to building and managing advanced smart grid and metering infrastructure across India. We deliver sustainable and efficient energy management solutions with a focus on innovation, reliability, and scalability.</p>
-    
+    <p>
+      Bharat Grid Private Limited (BGPL) is a strategic joint venture between Actis and EDF India which aims to operate a platform for Advanced Metering Infrastructure Service Provider (AMISP) concessions. Under this joint venture, EDF India and Actis will bring together their global expertise in energy solutions and infrastructure investments.
+    </p>
+    <p>
+      The Indian government is actively driving the National Smart Metering Project under the Revamped Distribution Sector Scheme (RDSS), targeting the deployment of 250 million smart meters by 2025. These advanced metering solutions are designed to enhance operational efficiencies, reduce aggregate technical and commercial losses, and bolster the financial sustainability of India’s power distribution companies (DISCOMs). Within this context, BGPL will support the deployment of smart metering infrastructure in India.
+    </p>
     <div class="map-section">
       <h3>Our Presence in India</h3>
-      <img src="India Map.png" alt="Bharat Grid Presence in India">
-      <p><strong>Presence in:</strong> Gujarat, Punjab</p>
+      <img src="India Map.png" alt="Bharat Grid Presence in India" />
+      <p><strong>Presence in:</strong> Gujarat, Punjab, and Tamil Nadu</p>
     </div>
   </section>
 
@@ -164,32 +194,72 @@
     </div>
   </section>
 
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-buttons">
+      <button onclick="showDashboard('main')">Dashboard</button>
+      <button onclick="showDashboard('pgvcl')">PGVCL</button>
+      <button onclick="showDashboard('pspcl')">PSPCL</button>
+    </div>
+    <div id="dashboardContent" class="dashboard">
+      <h3>Click on a project above to view details</h3>
+    </div>
+  </section>
+
   <section id="jobs" class="section">
     <h2>Job Openings</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">We are always looking for passionate professionals to join our team. If you’re interested in contributing to India’s smart energy revolution, explore our current openings below or upload your CV for future opportunities.</p>
-    <br>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      We are always looking for passionate professionals to join our team. If you’re interested in contributing to India’s smart energy revolution, explore our current openings below or upload your CV for future opportunities.
+    </p>
+    <br />
     <form action="#" method="post" enctype="multipart/form-data">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
-      <input type="submit" value="Upload CV">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+      <input type="submit" value="Upload CV" />
     </form>
   </section>
 
   <section id="contact" class="section">
     <h2>Contact Us</h2>
     <p style="text-align: center;">
-      <strong>Bharat Grid Pvt. Ltd. (A JV of EDF & ACTIS)</strong><br>
-      Prius Platinum, Wing A, 4th Floor, D3+P3B, District Center, Saket,<br>
-      New Delhi – 110 017, INDIA<br>
-    
+      <strong>Bharat Grid Pvt. Ltd. (A JV of EDF & ACTIS)</strong><br />
+      Prius Platinum, Wing A, 4th Floor, D3+P3B, District Center, Saket,<br />
+      New Delhi – 110 017, INDIA
     </p>
   </section>
 
   <footer>
     &copy; 2025 Bharat Grid Pvt. Ltd. | All Rights Reserved.
   </footer>
+
+  <script>
+    function showDashboard(type) {
+      const content = document.getElementById("dashboardContent");
+      let html = "";
+      if (type === "main") {
+        html = `
+          <h3>Overall Dashboard</h3>
+          <p><strong>PGVCL</strong> — Total Meter Scope: 33 Lakhs | Installed: 0 | Communicating: 0</p>
+          <p><strong>PSPCL</strong> — Total Meter Scope: 2 Lakhs | Installed: 0 | Communicating: 0</p>
+        `;
+      } else if (type === "pgvcl") {
+        html = `
+          <h3>PGVCL Project Dashboard</h3>
+          <p>1-Ph Meter — Scope: 33 Lakhs | Installed: 0 | Communicating: 0</p>
+          <p>3-Ph Meter — Scope: 33 Lakhs | Installed: 0 | Communicating: 0</p>
+          <p>LTCT Meter — Scope: 33 Lakhs | Installed: 0 | Communicating: 0</p>
+        `;
+      } else if (type === "pspcl") {
+        html = `
+          <h3>PSPCL Project Dashboard</h3>
+          <p>DT Meter — Scope: 1 Lakh | Installed: 0 | Communicating: 0</p>
+          <p>Feeder Meter — Scope: 20,000 | Installed: 0 | Communicating: 0</p>
+        `;
+      }
+      content.innerHTML = html;
+    }
+  </script>
 </body>
 </html>
-
-
