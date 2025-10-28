@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bharat Grid Pvt. Ltd.</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,162 +12,145 @@
       background-color: #ffffff;
       color: #333;
     }
+
+    /* Header */
     header {
-      background-color: #ff6600;
-      color: white;
+      background-color: #ffffff;
+      color: #ff6600;
       padding: 15px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 2px solid #ff6600;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header img {
       height: 60px;
+      width: auto;
+      vertical-align: middle;
     }
+
     nav a {
-      color: white;
+      color: #ff6600;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
     nav a:hover {
+      color: #e55a00;
       text-decoration: underline;
     }
+
+    /* Hero Section */
     .hero {
-      background: linear-gradient(rgba(255, 102, 0, 0.6), rgba(255, 102, 0, 0.6)), url('https://www.intellismartinfra.in/assets/images/banner/home-banner.jpg') no-repeat center center/cover;
+      background: linear-gradient(rgba(255, 102, 0, 0.6), rgba(255, 102, 0, 0.6)),
+                  url('https://www.intellismartinfra.in/assets/images/banner/home-banner.jpg')
+                  no-repeat center center/cover;
       color: white;
       text-align: center;
       padding: 120px 20px;
     }
+
     .hero h1 {
       font-size: 48px;
       margin-bottom: 10px;
     }
+
     .hero p {
       font-size: 20px;
     }
-    .section {
+
+    section {
       padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .section h2 {
-      color: #ff6600;
       text-align: center;
+    }
+
+    section h2 {
+      color: #ff6600;
+      font-size: 32px;
       margin-bottom: 30px;
     }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    .features, .partners {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
     }
-    .feature {
+
+    .feature, .partner {
+      flex: 1 1 250px;
       background: #f9f9f9;
-      border: 1px solid #eee;
-      border-radius: 10px;
       padding: 20px;
-      text-align: center;
-    }
-    .feature h3 {
-      color: #ff6600;
-    }
-    .map-section {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .map-section img {
-      max-width: 100%;
-      height: auto;
       border-radius: 10px;
-      border: 1px solid #ddd;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
+
+    .partner img {
+      max-height: 80px;
+      max-width: 150px;
+      object-fit: contain;
     }
+
+    /* India Map */
+    .map img {
+      width: 60%;
+      max-width: 700px;
+      border: 2px solid #ff6600;
+      border-radius: 10px;
+    }
+
+    /* Careers */
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
-    }
-    input[type="text"], input[type="email"], input[type="file"] {
-      width: 100%;
       max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    input[type="submit"] {
+
+    button {
       background-color: #ff6600;
       color: white;
-      padding: 10px 20px;
       border: none;
+      padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
-      font-size: 16px;
     }
-    input[type="submit"]:hover {
+
+    button:hover {
       background-color: #e55a00;
     }
 
-    /* Project Tabs */
-    .tabs {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .tab {
-      padding: 10px 20px;
-      background-color: #eee;
-      border: 1px solid #ccc;
-      cursor: pointer;
-      margin: 0 5px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .tab.active {
+    /* Footer */
+    footer {
       background-color: #ff6600;
       color: white;
-    }
-    .tab-content {
-      display: none;
       text-align: center;
-      background: #f9f9f9;
       padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #ddd;
-    }
-    .tab-content.active {
-      display: block;
     }
 
-    /* Partners Section */
-    .partners {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-    }
-    .partner {
-      text-align: center;
-    }
-    .partner img {
-      height: 60px;
-      width: auto;
-      margin-bottom: 10px;
-    }
   </style>
 </head>
+
 <body>
   <header>
     <img src="logo.png" alt="BGPL Logo">
     <nav>
-      <a href="#about">About Us</a>
+      <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#partners">Partners</a>
@@ -177,142 +161,63 @@
 
   <section class="hero">
     <h1>Welcome to Bharat Grid Pvt. Ltd.</h1>
-    <p>Empowering India's Smart Energy Infrastructure</p>
+    <p>Empowering Smart Infrastructure Solutions for a Connected India</p>
   </section>
 
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Us</h2>
-    <p>
-      Bharat Grid Private Limited (BGPL) is a strategic joint venture between Actis and EDF India which aims to operate a platform for Advanced Metering Infrastructure Service Provider (AMISP) concessions. 
-      Under this joint venture, EDF India and Actis will bring together their global expertise in energy solutions and infrastructure investments.
-      <br><br>
-      The Indian government is actively driving the National Smart Metering Project under the Revamped Distribution Sector Scheme (RDSS), targeting the deployment of 250 million smart meters by 2025. 
-      These advanced metering solutions are designed to enhance operational efficiencies, reduce aggregate technical and commercial losses, and bolster the financial sustainability of India’s power distribution companies (DISCOMs). 
-      Within this context, BGPL will support the deployment of smart metering infrastructure in India.
-    </p>
-
-    <div class="map-section">
-      <h3>Our Presence in India</h3>
-      <img src="India Map.png" alt="Bharat Grid Presence in India">
-      <p><strong>Presence in:</strong> Gujarat, Punjab</p>
-    </div>
+    <p>Bharat Grid Pvt. Ltd. (BGPL) is committed to enabling intelligent infrastructure and digital grid solutions across India. We bring innovation, connectivity, and efficiency to modern power systems.</p>
   </section>
 
-  <section id="services" class="section">
+  <section id="services">
     <h2>Our Services</h2>
     <div class="features">
-      <div class="feature">
-        <h3>Smart Metering</h3>
-        <p>Deployment of state-of-the-art smart meters for efficient energy consumption monitoring.</p>
-      </div>
-      <div class="feature">
-        <h3>Grid Modernization</h3>
-        <p>Advanced grid management systems for improved reliability and reduced losses.</p>
-      </div>
-      <div class="feature">
-        <h3>Data Analytics</h3>
-        <p>Real-time data insights and analytics for better energy management decisions.</p>
-      </div>
-      <div class="feature">
-        <h3>Project Management</h3>
-        <p>Comprehensive project planning, execution, and lifecycle management for infrastructure projects.</p>
-      </div>
+      <div class="feature"><h3>Smart Metering</h3><p>Advanced AMI systems enabling real-time data and insights.</p></div>
+      <div class="feature"><h3>IoT Integration</h3><p>Connected devices to monitor and manage grid performance efficiently.</p></div>
+      <div class="feature"><h3>Cloud Solutions</h3><p>Secure and scalable cloud hosting for digital grid data and analytics.</p></div>
+      <div class="feature"><h3>Data Analytics</h3><p>AI-driven insights for predictive maintenance and operational excellence.</p></div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Our Projects</h2>
-    <div class="tabs">
-      <div class="tab active" onclick="showTab('dashboard')">Dashboard</div>
-      <div class="tab" onclick="showTab('pgvcl')">PGVCL</div>
-      <div class="tab" onclick="showTab('pspcl')">PSPCL</div>
-    </div>
-
-    <div id="dashboard" class="tab-content active">
-      <h3>Project Overview Dashboard</h3>
-      <p><strong>PGVCL:</strong> Total Meter Scope - 33 Lakhs | Installed - 0 | Communicating - 0</p>
-      <p><strong>PSPCL:</strong> Total Meter Scope - 2 Lakhs | Installed - 0 | Communicating - 0</p>
-    </div>
-
-    <div id="pgvcl" class="tab-content">
-      <h3>PGVCL Project Dashboard</h3>
-      <p><strong>1Ph Meter:</strong> Total Scope - 3193514 | Installed - 0 | Communicating - 0</p>
-      <p><strong>3Ph Meter:</strong> Total Scope - 112517 | Installed - 0 | Communicating - 0</p>
-      <p><strong>LTCT Meter:</strong> Total Scope - 5000 | Installed - 0 | Communicating - 0</p>
-    </div>
-
-    <div id="pspcl" class="tab-content">
-      <h3>PSPCL Project Dashboard</h3>
-      <p><strong>DT Meter:</strong> Total Scope - 184000 | Installed - 0 | Communicating - 0</p>
-      <p><strong>Feeder Meter:</strong> Total Scope - 12563 | Installed - 0 | Communicating - 0</p>
+  <section id="projects">
+    <h2>Our Presence</h2>
+    <div class="map">
+      <img src="India Map.png" alt="BGPL Presence Map">
+      <p><strong>Presence:</strong> Gujarat, Punjab, and Tamil Nadu</p>
     </div>
   </section>
 
-  <!-- Partners Section -->
-  <section id="partners" class="section">
+  <section id="partners">
     <h2>Our Partners</h2>
     <div class="partners">
-      <div class="partner">
-        <img src="vodafone.png" alt="Vodafone India Ltd">
-        <p>Vodafone India Ltd</p>
-      </div>
-      <div class="partner">
-        <img src="edf.png" alt="EDF IN">
-        <p>EDF IN</p>
-      </div>
-      <div class="partner">
-        <img src="siemens.png" alt="Siemens">
-        <p>Siemens</p>
-      </div>
-      <div class="partner">
-        <img src="aws.png" alt="AWS">
-        <p>AWS</p>
-      </div>
-      <div class="partner">
-        <img src="bentec.png" alt="Bentec">
-        <p>Bentec</p>
-      </div>
+      <div class="partner"><img src="vodafone.png" alt="Vodafone"></div>
+      <div class="partner"><img src="edf.png" alt="EDF IN"></div>
+      <div class="partner"><img src="siemens.png" alt="Siemens"></div>
+      <div class="partner"><img src="aws.png" alt="AWS"></div>
+      <div class="partner"><img src="bentech.png" alt="Bentech"></div>
     </div>
   </section>
 
-  <section id="jobs" class="section">
+  <section id="jobs">
     <h2>Job Openings</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">We are always looking for passionate professionals to join our team. If you’re interested in contributing to India’s smart energy revolution, explore our current openings below or upload your CV for future opportunities.</p>
-    <br>
-    <form action="#" method="post" enctype="multipart/form-data">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
-      <input type="submit" value="Upload CV">
+    <p>We are always looking for talented professionals to join our mission.</p>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email ID" required>
+      <input type="file" accept=".pdf,.doc,.docx">
+      <button type="submit">Upload CV</button>
     </form>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p style="text-align: center;">
-      <strong>Bharat Grid Pvt. Ltd. (A JV of EDF & ACTIS)</strong><br>
-      Prius Platinum, Wing A, 4th Floor, D3+P3B, District Center, Saket,<br>
-      New Delhi – 110 017, INDIA<br>
-      Mob.: +91 9918904222
-    </p>
+    <p>Bharat Grid Pvt. Ltd.<br>
+       New Delhi, India<br>
+       Email: info@bharatgrid.com</p>
   </section>
 
   <footer>
-    &copy; 2025 Bharat Grid Pvt. Ltd. | All Rights Reserved.
+    <p>© 2025 Bharat Grid Pvt. Ltd. | All Rights Reserved</p>
   </footer>
-
-  <script>
-    function showTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      const contents = document.querySelectorAll('.tab-content');
-      tabs.forEach(tab => tab.classList.remove('active'));
-      contents.forEach(content => content.classList.remove('active'));
-      document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
 </body>
 </html>
-
-
